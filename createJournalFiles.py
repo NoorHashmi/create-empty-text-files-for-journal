@@ -89,7 +89,7 @@ def createOrDeleteJournalFiles(action = 'none' , years = [2022], months = list(r
                     stringDay = str(day)
 
 
-                fileName = stringYear + ' ' + stringMonth + ' ' + stringDay + ' - '  + 'Journal Entry.txt'
+                fileName = 'journalFiles/' + stringYear + '-' + stringMonth + '-' + stringDay + '_'  + 'JournalEntry.txt'
 
                 if(action == 'create'):
                     createFile(fileName)
@@ -129,7 +129,7 @@ def dayIsInvalid(day):
 if __name__ == '__main__':
 
     years = [2022]
-    months = [1,2,3,4,5,6]
+    months = [9, 10, 11, 12]
     days = [1,2,3,4,5]
-    createOrDeleteJournalFiles(action = 'create', years = years, months = months, days = days)
+    createOrDeleteJournalFiles(action = 'create', years = years, months = months)
     
